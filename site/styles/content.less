@@ -1,0 +1,45 @@
+/**
+ * Main Style Sheet
+ * Eren-Ben-Harush Site
+ *
+ * Copyright (c) 2015. by Way2CU, http://way2cu.com
+ * Authors:Tal Reznic
+ */
+
+section#knowledge {
+	text-align: center;
+	padding: 50px calc(~'(100% - 1200px) / 2');
+	text-transform: uppercase;
+}
+
+section#knowledge h2 {
+	display: inline-block;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 60px;
+	padding-right: 60px;
+	border: 1px solid @color_text;
+	line-height: 100%;
+	position: relative;
+}
+
+section#knowledge h2:before {
+	content: "";
+	position: absolute;
+	top: -25%;
+	left: -5%;
+	width: 110%;
+	height: 150%;
+	border: 1px solid @color_text;
+	box-sizing: border-box;
+}
+
+section#knowledge > p {
+	width: 800px;
+	margin-left: auto;
+	margin-right: auto;	
+}
+
+section#knowledge strong {
+	color: @color_ac_green;
+}
