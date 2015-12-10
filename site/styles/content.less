@@ -6,11 +6,16 @@
  * Authors: Tal Reznic
  */
 
+section#solutions,
 section#box,
 section#knowledge {
 	text-align: center;
 	padding: 50px calc(~'(100% - 1200px) / 2');
 	text-transform: uppercase;
+}
+
+section#solutions {
+	text-transform: none;
 }
 
 section#box {
@@ -22,6 +27,7 @@ section#box {
 	min-height: 300px;
 }
 
+section#solutions h2,
 section#box h2,
 section#knowledge h2 {
 	display: block;
@@ -35,11 +41,16 @@ section#knowledge h2 {
 	width: 450px;
 }
 
+section#solutions h2 {
+	text-transform: uppercase;
+}
+
 section#box h2 {
 	color: white;
 	border: 1px solid white;
 }
 
+section#solutions h2:before,
 section#box h2:before,
 section#knowledge h2:before {
 	content: "";
@@ -56,6 +67,7 @@ section#box h2:before {
 	border: 1px solid white;
 }
 
+section#solutions > p,
 section#box > p,
 section#knowledge > p {
 	width: 800px;
@@ -71,6 +83,7 @@ section#knowledge strong {
 	color: @color_ac_green;
 }
 
+section#solutions figure,
 section#box figure,
 section#knowledge figure {
 	display: inline-block;
@@ -78,6 +91,7 @@ section#knowledge figure {
 	position: relative;
 }
 
+section#solutions figure:before,
 section#box figure:before,
 section#knowledge figure:before {
 	content: "";
@@ -96,6 +110,7 @@ section#box figure:before {
 	border-bottom: 1px solid white;
 }
 
+section#solutions figure:after,
 section#box figure:after,
 section#knowledge figure:after {
 	content: "";
@@ -114,6 +129,7 @@ section#box figure:after {
 	border-bottom: 1px solid white;	
 }
 
+section#solutions svg,
 section#box svg ,
 section#knowledge svg {
 	width: 70px;
@@ -123,3 +139,45 @@ section#knowledge svg {
 section#box svg {
 	fill: white;
 }
+
+section#solutions ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+
+section#solutions li.stock.feature {
+	display: inline-block;
+	vertical-align: top;
+	padding-bottom: 200px;
+	width: 33.3%;
+	position: relative;
+}
+
+section#solutions li.stock.feature:before {
+	content: "";
+	position: absolute;
+	top: 40px;
+	left: 50%;
+	margin-left: -200px;
+	background-image: url(../images/features-sprite.svg);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	background-size: 1200px 400px;
+	width: 400px;
+	height: 300px;
+}
+
+section#solutions li.stock.feature:nth-of-type(2):before {
+	background-position: -400px 0px;
+}
+
+section#solutions li.stock.feature:nth-of-type(3):before {
+	background-position: -800px 0px;
+}
+
+section#solutions li.stock.feature p {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+

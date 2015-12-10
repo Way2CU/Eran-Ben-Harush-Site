@@ -52,9 +52,35 @@
 					/>
 			</section>
 
+			<section id="solutions">
+				<h2><cms:text constant="title_solution"/></h2>
+
+				<figure>
+					<svg>
+						<use
+							href="#solutions"
+							xlink:href="site/images/site-sprite.svg#solutions"
+							cms:eval="href,xlink:href"
+							/>
+					</svg>
+				</figure>
+
+				<ul>
+					<cms:module
+						name="articles"
+						action="show_list"
+						group="solutions"
+						template="stock/features_generic.xml"
+						cms:eval="group"
+						>
+						<param name="title" value=""/>
+					</cms:module>
+				</ul>	
+			</section>
+
 			<!-- Footer -->
 			<cms:template file="parts/footer.xml"/>
-			
+
 		</body>
 	</html>
 </document>
