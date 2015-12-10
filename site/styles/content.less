@@ -6,23 +6,41 @@
  * Authors: Tal Reznic
  */
 
+section#box,
 section#knowledge {
 	text-align: center;
 	padding: 50px calc(~'(100% - 1200px) / 2');
 	text-transform: uppercase;
 }
 
+section#box {
+	padding-top: 400px;
+
+	background-image: url(../images/out-of-the-box.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	min-height: 300px;
+}
+
+section#box h2,
 section#knowledge h2 {
-	display: inline-block;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	padding-left: 60px;
-	padding-right: 60px;
 	border: 1px solid @color_text;
 	line-height: 100%;
 	position: relative;
+	width: 450px;
 }
 
+section#box h2 {
+	color: white;
+	border: 1px solid white;
+}
+
+section#box h2:before,
 section#knowledge h2:before {
 	content: "";
 	position: absolute;
@@ -34,22 +52,33 @@ section#knowledge h2:before {
 	box-sizing: border-box;
 }
 
+section#box h2:before {
+	border: 1px solid white;
+}
+
+section#box > p,
 section#knowledge > p {
 	width: 800px;
 	margin-left: auto;
 	margin-right: auto;
 }
 
+section#box > p {
+	color: white;
+}
+
 section#knowledge strong {
 	color: @color_ac_green;
 }
 
+section#box figure,
 section#knowledge figure {
 	display: inline-block;
 	margin: 0px;
 	position: relative;
 }
 
+section#box figure:before,
 section#knowledge figure:before {
 	content: "";
 	position: absolute;
@@ -62,6 +91,12 @@ section#knowledge figure:before {
 	border-bottom: 1px solid @color_text;
 }
 
+section#box figure:before {
+	border-top: 1px solid white;
+	border-bottom: 1px solid white;
+}
+
+section#box figure:after,
 section#knowledge figure:after {
 	content: "";
 	position: absolute;
@@ -74,7 +109,17 @@ section#knowledge figure:after {
 	border-bottom: 1px solid @color_text;
 }
 
+section#box figure:after {
+	border-top: 1px solid white;
+	border-bottom: 1px solid white;	
+}
+
+section#box svg ,
 section#knowledge svg {
 	width: 70px;
 	height: 70px;
+}
+
+section#box svg {
+	fill: white;
 }
