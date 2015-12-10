@@ -5,11 +5,116 @@
 	<html lang="$language" cms:eval="lang">
 		<head>
 			<title><cms:text constant="site_title"/></title>
+			<link href='https://fonts.googleapis.com/css?family=Signika:400,700' rel='stylesheet' type='text/css'/>
 			<cms:module name="head_tag" action="print_tag"/>
 		</head>
 
 		<body class="$language_rtl ? 'rtl' : 'ltr'" cms:eval="class">
-			<h1>It works!</h1>
+			<header>
+
+				<h1><cms:text constant="title_header"/></h1>
+
+				<p><cms:text constant="sub_header_title"/></p>
+
+				<div id="scroll">
+					<svg>
+						<use
+							href="#mousescroll"
+							xlink:href="site/images/site-sprite.svg#mousescroll"
+							/>
+					</svg>
+				<span><cms:text constant="scroll_label"/></span>
+				</div>
+
+			</header>
+
+			<section id="knowledge">
+				<h2><cms:text constant="title_knowledge"/></h2>
+
+				<p><cms:text constant="sub_knowledge_title"/></p>
+
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="knowledge"
+					template="parts/article.xml"
+					/>
+			</section>
+
+			<section id="box">
+				<h2><cms:text constant="title_box"/></h2>
+
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="box"
+					template="parts/article.xml"
+					/>
+			</section>
+
+			<section id="solutions">
+				<h2><cms:text constant="title_solution"/></h2>
+
+				<figure>
+					<svg>
+						<use
+							href="#solutions"
+							xlink:href="site/images/site-sprite.svg#solutions"
+							/>
+					</svg>
+				</figure>
+
+				<ul>
+					<cms:module
+						name="articles"
+						action="show_list"
+						group="solutions"
+						template="stock/features_generic.xml"
+						cms:eval="group"
+						>
+						<param name="title" value=""/>
+					</cms:module>
+				</ul>	
+			</section>
+
+			<section id="methodology">
+				<h2><cms:text constant="title_methodology"/></h2>
+
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="methodology"
+					template="parts/article.xml"
+					/>
+
+				<ul>
+					<cms:module
+						name="articles"
+						action="show_list"
+						group="methodology"
+						template="stock/features_generic.xml"
+						cms:eval="group"
+						>
+					</cms:module>
+				</ul>		
+
+			</section>
+
+			<section id="talk">
+				<h2><cms:text constant="title_talk"/></h2>
+
+				<ul>
+					<cms:module
+						name="links"
+						action="show_link_list"
+						template="parts/contact_article.xml"
+						/>
+				</ul>
+			</section>
+
+			<!-- Footer -->
+			<cms:template file="parts/footer.xml"/>
+
 		</body>
 	</html>
 </document>
