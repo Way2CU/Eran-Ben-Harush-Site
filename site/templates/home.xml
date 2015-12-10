@@ -51,6 +51,10 @@
 					template="parts/article.xml"
 					/>
 			</section>
+
+			<!-- Footer -->
+			<cms:template file="parts/footer.xml"/>
+			
 		</body>
 	</html>
 </document>
