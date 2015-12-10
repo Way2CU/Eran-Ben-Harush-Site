@@ -1,0 +1,11 @@
+<document>
+	<svg>
+		<use
+			href="#.'$params['text_id']'"
+			xlink:href="site/images/site-sprite.svg#.'$params['text_id']'"
+			cms:eval="href,xlink:href"
+			/>
+	</svg>
+	
+	<cms:markdown param="content" multilanguage="yes"/>
+</document>
