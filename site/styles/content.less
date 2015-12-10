@@ -6,6 +6,7 @@
  * Authors: Tal Reznic
  */
 
+section#talk,
 section#methodology,
 section#solutions,
 section#box,
@@ -15,11 +16,17 @@ section#knowledge {
 	text-transform: uppercase;
 }
 
+section#talk {
+	background-color: @color_ac_green;
+	color: white;
+}
+
 section#methodology {
 	background-color: @color_ac_purple;
 	color: white;
 }
 
+section#talk,
 section#solutions {
 	text-transform: none;
 }
@@ -33,6 +40,7 @@ section#box {
 	min-height: 300px;
 }
 
+section#talk h2,
 section#methodology h2,
 section#solutions h2,
 section#box h2,
@@ -48,16 +56,19 @@ section#knowledge h2 {
 	width: 450px;
 }
 
+section#talk h2,
 section#solutions h2 {
 	text-transform: uppercase;
 }
 
+section#talk h2,
 section#methodology h2,
 section#box h2 {
 	color: white;
 	border: 1px solid white;
 }
 
+section#talk h2:before,
 section#methodology h2:before,
 section#solutions h2:before,
 section#box h2:before,
@@ -72,11 +83,13 @@ section#knowledge h2:before {
 	box-sizing: border-box;
 }
 
+section#talk h2:before,
 section#methodology h2:before,
 section#box h2:before {
 	border: 1px solid white;
 }
 
+section#talk > p,
 section#methodology > p,
 section#solutions > p,
 section#box > p,
@@ -94,6 +107,7 @@ section#knowledge strong {
 	color: @color_ac_green;
 }
 
+section#talk figure,
 section#methodology figure,
 section#solutions figure,
 section#box figure,
@@ -145,6 +159,7 @@ section#box figure:after {
 	border-bottom: 1px solid white;	
 }
 
+section#talk svg,
 section#methodology svg,
 section#solutions svg,
 section#box svg ,
@@ -153,11 +168,13 @@ section#knowledge svg {
 	height: 60px;
 }
 
+section#talk svg,
 section#methodology svg,
 section#box svg {
 	fill: white;
 }
 
+section#talk ul,
 section#methodology ul,
 section#solutions ul {
 	margin: 0px;
@@ -165,10 +182,15 @@ section#solutions ul {
 	list-style-type: none;
 }
 
+section#talk ul {
+	margin-top: 100px;
+}
+
 section#methodology ul {
 	margin-top: 50px;
 }
 
+section#talk li,
 section#methodology li.stock.feature,
 section#solutions li.stock.feature {
 	display: inline-block;
@@ -176,6 +198,38 @@ section#solutions li.stock.feature {
 	padding-bottom: 200px;
 	width: 33.3%;
 	position: relative;
+}
+
+section#talk li {
+	width: 20%;
+	padding-bottom: 0px;
+}
+
+section#talk li a {
+	display: block;
+	color: white;
+	text-decoration: none;
+}
+
+section#talk li a:hover figure {
+	border-radius: 0px;
+	background-color: white;
+}
+
+section#talk li a:hover figure svg {
+	fill: @color_ac_green;
+}
+
+section#talk li a figure {
+	padding: 20px;
+	background-color: @color_ac_green;
+	border: 1px solid white;
+	border-radius: 50%;
+	transition: all 0.3s;
+}
+
+section#talk li a figure svg {
+	transition: all 0.3s;
 }
 
 section#methodology li.stock.feature {
