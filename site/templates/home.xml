@@ -10,7 +10,23 @@
 		</head>
 
 		<body class="$language_rtl ? 'rtl' : 'ltr'" cms:eval="class">
-			<h1>It works!</h1>
+			<header>
+
+				<h1><cms:text constant="title_header"/></h1>
+
+				<p><cms:text constant="sub_header_title"/></p>
+
+				<div id="scroll">
+					<svg>
+						<use
+							href="#icon-mousescroll"
+							xlink:href="site/images/site-sprite.svg#icon-mousescroll"
+							/>
+					</svg>
+				<span><cms:text constant="scroll_label"/></span>
+				</div>
+
+			</header>
 		</body>
 	</html>
 </document>
