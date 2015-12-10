@@ -6,7 +6,34 @@
  * Authors: Mladen Mijatov
  */
 
+ @color_ac_purple: #8b90a9;
+ @color_ac_green: #1abc9c;
+ @color_text: #464646;
+
+
+@import (css) "stock/header.css";
+@import (css) "stock/copyright.css";
+
+
 body {
 	background-color: white;
-	color: black;
+	color: @color_text;
+	font-family: 'Signika', sans-serif;
+}
+
+input,
+select,
+textarea,
+button {
+	font-family: Signika;
+	font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-family: Signika;
+	font-weight: 700;
 }
