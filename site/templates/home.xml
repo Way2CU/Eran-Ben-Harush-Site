@@ -78,6 +78,29 @@
 				</ul>	
 			</section>
 
+			<section id="methodology">
+				<h2><cms:text constant="title_methodology"/></h2>
+
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="methodology"
+					template="parts/article.xml"
+					/>
+
+				<ul>
+					<cms:module
+						name="articles"
+						action="show_list"
+						group="methodology"
+						template="stock/features_generic.xml"
+						cms:eval="group"
+						>
+					</cms:module>
+				</ul>		
+
+			</section>
+
 			<!-- Footer -->
 			<cms:template file="parts/footer.xml"/>
 

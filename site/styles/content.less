@@ -6,12 +6,18 @@
  * Authors: Tal Reznic
  */
 
+section#methodology,
 section#solutions,
 section#box,
 section#knowledge {
 	text-align: center;
 	padding: 50px calc(~'(100% - 1200px) / 2');
 	text-transform: uppercase;
+}
+
+section#methodology {
+	background-color: @color_ac_purple;
+	color: white;
 }
 
 section#solutions {
@@ -27,6 +33,7 @@ section#box {
 	min-height: 300px;
 }
 
+section#methodology h2,
 section#solutions h2,
 section#box h2,
 section#knowledge h2 {
@@ -45,11 +52,13 @@ section#solutions h2 {
 	text-transform: uppercase;
 }
 
+section#methodology h2,
 section#box h2 {
 	color: white;
 	border: 1px solid white;
 }
 
+section#methodology h2:before,
 section#solutions h2:before,
 section#box h2:before,
 section#knowledge h2:before {
@@ -63,10 +72,12 @@ section#knowledge h2:before {
 	box-sizing: border-box;
 }
 
+section#methodology h2:before,
 section#box h2:before {
 	border: 1px solid white;
 }
 
+section#methodology > p,
 section#solutions > p,
 section#box > p,
 section#knowledge > p {
@@ -83,6 +94,7 @@ section#knowledge strong {
 	color: @color_ac_green;
 }
 
+section#methodology figure,
 section#solutions figure,
 section#box figure,
 section#knowledge figure {
@@ -91,6 +103,7 @@ section#knowledge figure {
 	position: relative;
 }
 
+section#methodology figure:before,
 section#solutions figure:before,
 section#box figure:before,
 section#knowledge figure:before {
@@ -105,11 +118,13 @@ section#knowledge figure:before {
 	border-bottom: 1px solid @color_text;
 }
 
+section#methodology figure:before,
 section#box figure:before {
 	border-top: 1px solid white;
 	border-bottom: 1px solid white;
 }
 
+section#methodology figure:after,
 section#solutions figure:after,
 section#box figure:after,
 section#knowledge figure:after {
@@ -124,34 +139,64 @@ section#knowledge figure:after {
 	border-bottom: 1px solid @color_text;
 }
 
+section#methodology figure:after,
 section#box figure:after {
 	border-top: 1px solid white;
 	border-bottom: 1px solid white;	
 }
 
+section#methodology svg,
 section#solutions svg,
 section#box svg ,
 section#knowledge svg {
-	width: 70px;
-	height: 70px;
+	width: 60px;
+	height: 60px;
 }
 
+section#methodology svg,
 section#box svg {
 	fill: white;
 }
 
+section#methodology ul,
 section#solutions ul {
 	margin: 0px;
 	padding: 0px;
 	list-style-type: none;
 }
 
+section#methodology ul {
+	margin-top: 50px;
+}
+
+section#methodology li.stock.feature,
 section#solutions li.stock.feature {
 	display: inline-block;
 	vertical-align: top;
 	padding-bottom: 200px;
 	width: 33.3%;
 	position: relative;
+}
+
+section#methodology li.stock.feature {
+	width: calc(25% - 2px);
+	margin-left: 10px;
+	margin-right: 10px;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	border: 1px solid white;
+}
+
+section#methodology li.stock.feature:before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	margin-top: -0.5px;
+	left: 50%;
+	margin-left: -50px;
+	width: 100px;
+	height: 1px;
+	background-color: white;
 }
 
 section#solutions li.stock.feature:before {
@@ -180,4 +225,3 @@ section#solutions li.stock.feature p {
 	padding-left: 15px;
 	padding-right: 15px;
 }
-
