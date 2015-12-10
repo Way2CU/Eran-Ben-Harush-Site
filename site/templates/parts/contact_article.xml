@@ -11,8 +11,7 @@
 				</svg>
 			</figure>
 
-			<p><cms:markdown param="description"/></p>
-			
+			<p><cms:markdown param="description"/></p>	
 		</a>
 	</li>
 </document>
