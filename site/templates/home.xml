@@ -19,8 +19,8 @@
 				<div id="scroll">
 					<svg>
 						<use
-							href="#icon-mousescroll"
-							xlink:href="site/images/site-sprite.svg#icon-mousescroll"
+							href="#mousescroll"
+							xlink:href="site/images/site-sprite.svg#mousescroll"
 							/>
 					</svg>
 				<span><cms:text constant="scroll_label"/></span>
@@ -60,7 +60,6 @@
 						<use
 							href="#solutions"
 							xlink:href="site/images/site-sprite.svg#solutions"
-							cms:eval="href,xlink:href"
 							/>
 					</svg>
 				</figure>
@@ -99,6 +98,18 @@
 					</cms:module>
 				</ul>		
 
+			</section>
+
+			<section id="talk">
+				<h2><cms:text constant="title_talk"/></h2>
+
+				<ul>
+					<cms:module
+						name="links"
+						action="show_link_list"
+						template="parts/contact_article.xml"
+						/>
+				</ul>
 			</section>
 
 			<!-- Footer -->
