@@ -43,3 +43,38 @@ section#knowledge > p {
 section#knowledge strong {
 	color: @color_ac_green;
 }
+
+section#knowledge figure {
+	display: inline-block;
+	margin: 0px;
+	position: relative;
+}
+
+section#knowledge figure:before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	margin-top: -5px;
+	right: 120%;
+	width: 450px;
+	height: 10px;
+	border-top: 1px solid @color_text;
+	border-bottom: 1px solid @color_text;
+}
+
+section#knowledge figure:after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	margin-top: -5px;
+	left: 120%;
+	width: 450px;
+	height: 10px;
+	border-top: 1px solid @color_text;
+	border-bottom: 1px solid @color_text;
+}
+
+section#knowledge svg {
+	width: 70px;
+	height: 70px;
+}
