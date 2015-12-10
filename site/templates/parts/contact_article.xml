@@ -1,0 +1,17 @@
+<document>
+	<li>
+		<a href="$params['url']" cms:eval="href">
+			<figure>
+				<svg>
+					<use
+						href="'#'.$params['text']"
+						xlink:href="'site/images/site-sprite.svg#'.$params['text']"
+						cms:eval="href,xlink:href"
+						/>
+				</svg>
+			</figure>
+
+			<p><cms:markdown param="description"/></p>	
+		</a>
+	</li>
+</document>

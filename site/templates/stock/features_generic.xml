@@ -27,6 +27,7 @@
 			<h4><cms:var param="title" multilanguage="yes"/></h4>
 		</cms:if>
 
+
 		<!-- Content -->
 		<cms:markdown param="content" multilanguage="yes"/>
 	</li>
