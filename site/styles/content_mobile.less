@@ -1,0 +1,299 @@
+/**
+ * Main Mobile Style Sheet
+ * Eran ben harush
+ *
+ * Copyright (c) 2015. by Way2CU, http://way2cu.com
+ * Authors:Tal Reznic
+ */
+
+section#talk,
+section#methodology,
+section#solutions,
+section#box,
+section#knowledge {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+section#talk {
+	padding-top: 1px;
+	background-color: @color_ac_green;
+	color: @color_ac_text;
+}
+
+section#methodology {
+	padding-top: 1px;
+	background-color: @color_ac_purple;
+	color: @color_ac_text;
+}
+
+section#talk,
+section#solutions {
+	text-transform: none;
+}
+
+section#box {
+	padding-top: 40px;
+
+	background-image: url(../images/mobile-out-of-the-box.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: 100% auto;
+	min-height: 320px;
+}
+
+section#talk h2,
+section#methodology h2,
+section#solutions h2,
+section#box h2,
+section#knowledge h2 {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border: 1px solid @color_text;
+	line-height: 100%;
+	position: relative;
+	width: 85%;
+}
+
+section#talk h2,
+section#solutions h2 {
+	text-transform: uppercase;
+}
+
+section#talk h2,
+section#methodology h2,
+section#box h2 {
+	color: @color_ac_text;
+	border: 1px solid @color_ac_text;
+}
+
+section#talk h2:before,
+section#methodology h2:before,
+section#solutions h2:before,
+section#box h2:before,
+section#knowledge h2:before {
+	content: "";
+	position: absolute;
+	top: -25%;
+	left: -5%;
+	width: 110%;
+	height: 150%;
+	border: 1px solid @color_text;
+	box-sizing: border-box;
+}
+
+section#talk h2:before,
+section#methodology h2:before,
+section#box h2:before {
+	border: 1px solid @color_ac_text;
+}
+
+section#talk > p,
+section#methodology > p,
+section#solutions > p,
+section#box > p,
+section#knowledge > p {
+	width: 95%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+section#box > p {
+	color: @color_ac_text;
+}
+
+section#knowledge strong {
+	color: @color_ac_green;
+}
+
+section#talk figure,
+section#methodology figure,
+section#solutions figure,
+section#box figure,
+section#knowledge figure {
+	display: inline-block;
+	margin: 0px;
+	position: relative;
+}
+
+section#methodology figure:before,
+section#solutions figure:before,
+section#box figure:before,
+section#knowledge figure:before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	margin-top: -5px;
+	right: 120%;
+	width: 100px;
+	height: 10px;
+	border-top: 1px solid @color_text;
+	border-bottom: 1px solid @color_text;
+}
+
+section#methodology figure:before,
+section#box figure:before {
+	border-top: 1px solid @color_ac_text;
+	border-bottom: 1px solid @color_ac_text;
+}
+
+section#methodology figure:after,
+section#solutions figure:after,
+section#box figure:after,
+section#knowledge figure:after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	margin-top: -5px;
+	left: 120%;
+	width: 100px;
+	height: 10px;
+	border-top: 1px solid @color_text;
+	border-bottom: 1px solid @color_text;
+}
+
+section#methodology figure:after,
+section#box figure:after {
+	border-top: 1px solid @color_ac_text;
+	border-bottom: 1px solid @color_ac_text;	
+}
+
+section#talk svg,
+section#methodology svg,
+section#solutions svg,
+section#box svg ,
+section#knowledge svg {
+	width: 40px;
+	height: 40px;
+}
+
+section#talk svg,
+section#methodology svg,
+section#box svg {
+	fill: @color_ac_text;
+}
+
+section#talk ul,
+section#methodology ul,
+section#solutions ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+
+section#talk ul {
+	margin-top: 50px;
+}
+
+section#methodology ul {
+	margin-top: 50px;
+}
+
+section#talk li,
+section#methodology li.stock.feature,
+section#solutions li.stock.feature {
+	display: block;
+	padding-bottom: 200px;
+	position: relative;
+}
+
+section#solutions li.stock.feature {
+	padding-bottom: 165px;
+}
+
+section#solutions li.stock.feature:before {
+	content: "";
+	position: absolute;
+	top: 40px;
+	left: 50%;
+	margin-left: -150px;
+	background-image: url(../images/features-sprite.svg);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	background-size: 900px 300px;
+	width: 300px;
+	height: 300px;
+}
+
+section#solutions li.stock.feature:nth-of-type(2):before {
+	background-position: -300px 0px;
+}
+
+section#solutions li.stock.feature:nth-of-type(3):before {
+	background-position: -600px 0px;
+}
+
+section#solutions li.stock.feature p {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+section#methodology li.stock.feature {
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-bottom: 10px;
+	width: calc(48% - 2px);
+	padding-top: 40px;
+	padding-bottom: 40px;
+	border: 1px solid @color_ac_text;
+	white-space: nowrap;
+}
+
+section#methodology li.stock.feature:before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	margin-top: -0.5px;
+	left: 50%;
+	margin-left: -50px;
+	width: 100px;
+	height: 1px;
+	background-color: @color_ac_text;
+}
+
+section#methodology li.stock.feature p{
+	font-size: 2em;
+}
+
+section#methodology li.stock.feature strong {
+	font-size: 0.4em;
+}
+
+section#talk li {
+	display: inline-block;
+	vertical-align: top;
+	width: 50%;
+	padding-bottom: 0px;
+}
+
+section#talk li a {
+	display: block;
+	color: @color_ac_text;
+	text-decoration: none;
+}
+
+section#talk li a:hover figure {
+	border-radius: 0px;
+	background-color: @color_ac_text;
+}
+
+section#talk li a:hover figure svg {
+	fill: @color_ac_green;
+}
+
+section#talk li a figure {
+	padding: 20px;
+	background-color: @color_ac_green;
+	border: 1px solid @color_ac_text;
+	border-radius: 50%;
+	transition: all 0.3s;
+}
+
+section#talk li a figure svg {
+	transition: all 0.3s;
+}
