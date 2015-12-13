@@ -103,19 +103,20 @@ Site.on_load = function() {
 	if (Site.is_mobile())
 		Site.mobile_menu = new Caracal.MobileMenu();
 
-	var methodology_links = $('section#methodology li.stock.feature').find('p');
+    var is_position = true; 
+    var position = $('section#methodology').offset().top - 400;
+	var methodology_links = $('section#methodology li.stock.feature');
 
-	methodology_links.each(function() { 
-		console.log($(this).first().text());
-	});
-
-// new Tween($(this), 0, parseInt($(this).find('p').eq(0).text()), 2000);
-	// animateElement1 = new Tween($('section#methodology li.ads p:first'),0,219366,2000);
-	// animateElement2 = new Tween($('section#methodology li.cups p:first'),0,850,2000);
-	// animateElement3 = new Tween($('section#methodology li.rate p:first'),0,45,2000);
-	// animateElement3 = new Tween($('section#methodology li.clients p:first'),0,58,2000);
-
-
+    // Function for displaying tween animation triggered by window position
+    $(window).scroll(function (event) {
+        if($(window).scrollTop() >= position && is_position) {
+            is_position = false;
+        	methodology_links.each(function() { 
+                var end_value = parseInt($(this).find('p').eq(0).text());
+        		new Tween($(this).find('p').eq(0), 0, end_value, 2000);
+    	   });
+        }  
+    });
 };
 
 
