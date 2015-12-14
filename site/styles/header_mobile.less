@@ -1,20 +1,19 @@
 /**
- * Header Style Sheet
- * Eran-Ben-Harush Site
+ * Header Mobile Style Sheet
+ * Eran ben harush
  *
  * Copyright (c) 2015. by Way2CU, http://way2cu.com
- * Authors: Tal Reznic
+ * Authors:Tal Reznic
  */
 
-header {
+ header {
 	display: block;
 	text-align: center;
-	padding: 150px calc(~'(100% - 1200px) / 2');
-	background: url(../images/pattern.png), url(../images/header-background.jpg);
+	background: url(../images/pattern.png), url(../images/mobile-header.jpg);
 	background-repeat: repeat, no-repeat;
 	background-position: center top, center top;
-	background-size: 5px 5px, 1920px 940px ;
-	min-height: 640px;
+	background-size: 5px 5px, 100% auto;
+	min-height: 320px;
 
 	color: @color_ac_text;
 	text-transform: uppercase;
@@ -26,29 +25,29 @@ header h1 {
 	display: inline-block;
 	border-bottom: 1px solid @color_ac_text;
 	font-weight: 400;
-	font-size: 5em;
+	font-size: 3em;
 }
 
 header h1 strong {
 	display: block;
-	font-size: 2em;
+	font-size: 1.2em;
 }
 
 header p {
 	margin: 0px;
-	font-size: 4em;
+	font-size: 1.6em;
 }
 
 div#scroll {
 	position: absolute;
-	bottom: 40px;
+	bottom: 10px;
 	left: 50%;
-	margin-left: -30px;
+	margin-left: -20px;
 }
 
 div#scroll svg {
-	width: 60px;
-	height: 60px;
+	width: 40px;
+	height: 40px;
 	fill: @color_ac_text;
 }
 

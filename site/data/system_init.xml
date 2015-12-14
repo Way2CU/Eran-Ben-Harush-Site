@@ -10,9 +10,10 @@
 	<module name="articles" order="1" preload="no"/>
 	<module name="contact_form" order="2" preload="no"/>
 	<module name="mandrill" order="3" preload="no"/>
+	<module name="links" order="4" preload="no"/>
 
-	<user
-		fullname="Administrator"
+	<user 
+		fullname="Administrator" 
 		username="admin"
 		password=""
 		level="10"
