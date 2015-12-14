@@ -70,6 +70,9 @@ function animate(container,container_elements,trigger_element,delay_time) {
        	 	// Find all container elements
         		self.container_elements = self.container.find(container_elements);
 
+		// set initial state
+        		self.handle_scroll(null);
+
 	 }
 
  	self.handle_scroll = function(event) {
