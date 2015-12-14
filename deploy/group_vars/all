@@ -1,12 +1,12 @@
 ---
 site:
-  domain: sample.com
+  domain: web-intro.com
   # subdomain: test
   make_alias: false
   root: httpdocs
-  username: sample
+  username: web-intro
   caracal_branch: develop
-  # ip_address: 0.0.0.0
+  ip_address: 74.208.172.190
   # owner: Some Person
   # plan: Unlimited
   # database_type: 'mysql'

@@ -1,11 +1,13 @@
 /**
  * Main Style Sheet
- * Eren-Ben-Harush Site
+ * Eran Ben Harush Site
  *
  * Copyright (c) 2015. by Way2CU, http://way2cu.com
- * Authors: Tal Reznic
+ * Authors: Tal Reznic, Mladen Mijatov
  */
 
+section#terms,
+section#contact,
 section#talk,
 section#methodology,
 section#solutions,
@@ -14,6 +16,28 @@ section#knowledge {
 	text-align: center;
 	padding: 50px calc(~'(100% - 1200px) / 2');
 	text-transform: uppercase;
+}
+
+section#terms {
+	text-align: left;
+	text-transform: none;
+	background-color: lighten(@color_text,60%);
+}
+
+section#terms article {
+	margin-left: auto;
+	margin-right: auto;
+	padding: 20px;
+	width: calc(960px - 40px);
+	background-color: @color_ac_text;
+}
+
+section#terms article ul {
+	list-style-type: none;
+}
+
+section#terms article ul li  {
+	margin-bottom: 10px;
 }
 
 section#talk {
@@ -26,6 +50,7 @@ section#methodology {
 	color: @color_ac_text;
 }
 
+section#contact,
 section#talk,
 section#solutions {
 	text-transform: none;
@@ -40,6 +65,7 @@ section#box {
 	min-height: 300px;
 }
 
+section#contact h2,
 section#talk h2,
 section#methodology h2,
 section#solutions h2,
@@ -56,6 +82,7 @@ section#knowledge h2 {
 	width: 450px;
 }
 
+section#contact h2,
 section#talk h2,
 section#solutions h2 {
 	text-transform: uppercase;
@@ -68,6 +95,7 @@ section#box h2 {
 	border: 1px solid @color_ac_text;
 }
 
+section#contact h2:before,
 section#talk h2:before,
 section#methodology h2:before,
 section#solutions h2:before,
@@ -89,6 +117,7 @@ section#box h2:before {
 	border: 1px solid @color_ac_text;
 }
 
+section#contact > p,
 section#talk > p,
 section#methodology > p,
 section#solutions > p,
@@ -99,6 +128,14 @@ section#knowledge > p {
 	margin-right: auto;
 }
 
+section#contact > p {
+	font-size: 1.3em;
+}
+
+section#contact > p:first-of-type {
+	font-weight: 700;
+}
+
 section#box > p {
 	color: @color_ac_text;
 }
@@ -107,6 +144,7 @@ section#knowledge strong {
 	color: @color_ac_green;
 }
 
+section#contact figure,
 section#talk figure,
 section#methodology figure,
 section#solutions figure,
@@ -117,6 +155,7 @@ section#knowledge figure {
 	position: relative;
 }
 
+section#contact figure:before,
 section#methodology figure:before,
 section#solutions figure:before,
 section#box figure:before,
@@ -138,6 +177,7 @@ section#box figure:before {
 	border-bottom: 1px solid @color_ac_text;
 }
 
+section#contact figure:after,
 section#methodology figure:after,
 section#solutions figure:after,
 section#box figure:after,
@@ -159,6 +199,7 @@ section#box figure:after {
 	border-bottom: 1px solid @color_ac_text;	
 }
 
+section#contact svg,
 section#talk svg,
 section#methodology svg,
 section#solutions svg,
@@ -182,6 +223,10 @@ section#solutions ul {
 	list-style-type: none;
 }
 
+section#solutions ul  {
+	overflow: hidden;
+}
+
 section#talk ul {
 	margin-top: 100px;
 }
@@ -200,9 +245,24 @@ section#solutions li.stock.feature {
 	position: relative;
 }
 
+section#solutions li.stock.feature {
+	left: 100%;
+	transition: all 0.3s;
+}
+
+section#solutions li.stock.feature.active {
+	left: 0%;
+}
+
 section#talk li {
 	width: 20%;
 	padding-bottom: 0px;
+	opacity: 0;
+	transition: all 0.3s;
+}
+
+section#talk li.active {
+	opacity: 1;
 }
 
 section#talk li a {
@@ -240,6 +300,7 @@ section#methodology li.stock.feature {
 	padding-bottom: 40px;
 	border: 1px solid @color_ac_text;
 	white-space: nowrap;
+	position: relative;
 }
 
 section#methodology li.stock.feature:before {
@@ -256,6 +317,11 @@ section#methodology li.stock.feature:before {
 
 section#methodology li.stock.feature p{
 	font-size: 3em;
+}
+
+section#methodology li.stock.feature:nth-of-type(3) p:first-of-type:after {
+	content: "%";
+	left: 50px;
 }
 
 section#methodology li.stock.feature strong {
@@ -287,4 +353,136 @@ section#solutions li.stock.feature:nth-of-type(3):before {
 section#solutions li.stock.feature p {
 	padding-left: 15px;
 	padding-right: 15px;
+}
+
+/**
+ * Contact form
+ */
+section#contact  form {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 900px;
+	text-align: left;	
+}
+
+section#contact  form label {
+	display: block;
+	margin-bottom: 20px;
+	transition: all 0.3s;
+}
+
+section#contact  form label textarea,
+section#contact  form label input {
+	border: none;
+	border-bottom: 1px solid lighten(@color_text, 30%);
+	padding-top: 5px;
+	padding-bottom: 5px;
+	width: 100%;
+	transition: all 0.3s;
+}
+
+section#contact  form label textarea {
+	resize: none;
+}
+
+section#contact  form label textarea:focus,
+section#contact  form label input:focus {
+	border-bottom: 1px solid @color_ac_green;
+}
+
+section#contact  form label:nth-of-type(2),
+section#contact  form label:nth-of-type(3) {
+	display: inline-block;
+	vertical-align: top;
+	width: 48%;
+}
+
+section#contact  form label:nth-of-type(2) {
+	margin-right: 2%;
+}
+
+section#contact  form label:nth-of-type(3) {
+	margin-left: 2%;
+}
+
+section#contact div.controls {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	width: 20%;
+	position: relative;
+}
+
+section#contact div.controls:hover:before {
+	top: -10px;
+}
+
+section#contact div.controls:hover:after {
+	bottom: -10px;
+}
+
+
+section#contact div.controls:before {
+	content: "";
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 1px;
+	background-color: @color_text;
+	transition: all 0.3s;
+}
+
+section#contact div.controls:after {
+	content: "";
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	width: 100%;
+	height: 1px;
+	background-color: @color_text;
+	transition: all 0.3s;
+}
+
+section#contact div.controls button {
+	border: none;
+	background-color: white;
+	font-size: 2em;
+	text-transform: uppercase;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+section#contact div.controls button:hover {
+	color: @color_ac_green;
+}
+
+/*Tablet version */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+
+section#solutions li.stock.feature {
+	padding-bottom: 150px;
+} 
+
+section#solutions li.stock.feature:before {
+ 	margin-left: -150px;
+ 	background-size: 900px 300px;
+ 	width: 300px;
+ }
+
+section#solutions li.stock.feature:nth-of-type(2):before {
+ 	background-position: -300px 0px;
+ } 
+
+section#solutions li.stock.feature:nth-of-type(3):before {
+ 	background-position: -600px 0px;
+ } 	
+
+ section#methodology li.stock.feature {
+ 	margin-left: 5px;
+ 	margin-right: 5px;
+ }
+		
 }

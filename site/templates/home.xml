@@ -11,9 +11,7 @@
 
 		<body class="$language_rtl ? 'rtl' : 'ltr'" cms:eval="class">
 			<header>
-
 				<h1><cms:text constant="title_header"/></h1>
-
 				<p><cms:text constant="sub_header_title"/></p>
 
 				<div id="scroll">
@@ -25,12 +23,10 @@
 					</svg>
 				<span><cms:text constant="scroll_label"/></span>
 				</div>
-
 			</header>
 
 			<section id="knowledge">
 				<h2><cms:text constant="title_knowledge"/></h2>
-
 				<p><cms:text constant="sub_knowledge_title"/></p>
 
 				<cms:module
@@ -74,7 +70,7 @@
 						>
 						<param name="title" value=""/>
 					</cms:module>
-				</ul>	
+				</ul>
 			</section>
 
 			<section id="methodology">
@@ -96,9 +92,9 @@
 						cms:eval="group"
 						>
 					</cms:module>
-				</ul>		
-
+				</ul>
 			</section>
+
 
 			<section id="talk">
 				<h2><cms:text constant="title_talk"/></h2>
@@ -112,9 +108,28 @@
 				</ul>
 			</section>
 
+			<section id="contact">
+				<h2><cms:text constant="title_contact"/></h2>
+				<p><cms:text constant="subtitle_contact"/></p>
+
+				<figure>
+					<svg>
+						<use
+							href="#email"
+							xlink:href="site/images/site-sprite.svg#email"
+							/>
+					</svg>
+				</figure>
+				<p><cms:text constant="title_form"/></p>
+				<cms:module
+					name="contact_form"
+					action="show"
+					text_id="contact"
+				/>
+			</section>
+
 			<!-- Footer -->
 			<cms:template file="parts/footer.xml"/>
-
 		</body>
 	</html>
 </document>
