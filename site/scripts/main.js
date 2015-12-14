@@ -46,12 +46,10 @@ Site.is_mobile = function() {
 };
 
 /**
- *	Animate object for animating elements triggered by position of window
- *
- *
+ *    Animate object for animating elements triggered by position of window
  */
 
-function animate(container,container_elements,trigger_element,delay_time) {
+function animate(container, container_elements, trigger_element, delay_time) {
 	var self = this;
 
 	self.container = container;
@@ -74,8 +72,9 @@ function animate(container,container_elements,trigger_element,delay_time) {
 	}
 
 	self.handle_scroll = function(event) {
+		//  position to trigger class on container elements
 		var over_position = self._window.scrollTop() >= self.position;
-		
+
 		if (over_position && !self.active) {
 			self.container_elements.each(function(index) {
 				var item = self.container_elements.eq(index);
@@ -91,6 +90,7 @@ function animate(container,container_elements,trigger_element,delay_time) {
 		} 
 	}
 
+	//  function for adding active class
 	self.handle_active = function(item) {
 		item.addClass('active');
 	}
