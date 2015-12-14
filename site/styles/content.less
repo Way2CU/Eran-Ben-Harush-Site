@@ -259,6 +259,7 @@ section#methodology li.stock.feature {
 	padding-bottom: 40px;
 	border: 1px solid @color_ac_text;
 	white-space: nowrap;
+	position: relative;
 }
 
 section#methodology li.stock.feature:before {
@@ -275,6 +276,11 @@ section#methodology li.stock.feature:before {
 
 section#methodology li.stock.feature p{
 	font-size: 3em;
+}
+
+section#methodology li.stock.feature:nth-of-type(3) p:first-of-type:after {
+	content: "%";
+	left: 50px;
 }
 
 section#methodology li.stock.feature strong {
