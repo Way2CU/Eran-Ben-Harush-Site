@@ -95,6 +95,19 @@
 				</ul>
 			</section>
 
+
+			<section id="talk">
+				<h2><cms:text constant="title_talk"/></h2>
+
+				<ul>
+					<cms:module
+						name="links"
+						action="show_link_list"
+						template="parts/contact_article.xml"
+						/>
+				</ul>
+			</section>
+
 			<section id="contact">
 				<h2><cms:text constant="title_contact"/></h2>
 				<p><cms:text constant="subtitle_contact"/></p>
@@ -107,24 +120,12 @@
 							/>
 					</svg>
 				</figure>
-
+				<p><cms:text constant="title_form"/></p>
 				<cms:module
 					name="contact_form"
 					action="show"
 					text_id="contact"
 				/>
-			</section>
-
-			<section id="talk">
-				<h2><cms:text constant="title_talk"/></h2>
-
-				<ul>
-					<cms:module
-						name="links"
-						action="show_link_list"
-						template="parts/contact_article.xml"
-						/>
-				</ul>
 			</section>
 
 			<!-- Footer -->
