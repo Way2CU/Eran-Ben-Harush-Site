@@ -75,8 +75,7 @@ function animate(container,container_elements,trigger_element,delay_time) {
 
 	self.handle_scroll = function(event) {
 		var over_position = self._window.scrollTop() >= self.position;
-		console.log("Hello");
-
+		
 		if (over_position && !self.active) {
 			self.container_elements.each(function(index) {
 				var item = self.container_elements.eq(index);
@@ -89,11 +88,7 @@ function animate(container,container_elements,trigger_element,delay_time) {
 
 			self.active = true;
 			self._window.off('scroll', self.handle_scroll);
-
-		} else if (!over_position && self.active) {
-			clearTimeout();
-			self.active = false;
-		}
+		} 
 	}
 
 	self.handle_active = function(item) {
