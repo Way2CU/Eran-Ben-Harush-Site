@@ -59,23 +59,23 @@ function animate(container,container_elements,trigger_element,delay_time) {
 	self.position = trigger_element.offset().top -300;
 	self.delay_time = delay_time;
 	self.active = false;
+	self._window = $(window);
 
 	/*
 	 * object initialization
 	 */
 	self._init = function() {
 		// connect signals
-		$(window).on('scroll', self.handle_scroll);
-
+		self._window.on('scroll', self.handle_scroll);
+		
 		// Find all container elements
 		self.container_elements = self.container.find(container_elements);
 
 	}
 
 	self.handle_scroll = function(event) {
-		var over_position = $(window).scrollTop() >= self.position;
-
-		for (var i=0; i<100000; i++){console.log('');}
+		var over_position = self._window.scrollTop() >= self.position;
+		console.log("Hello");
 
 		if (over_position && !self.active) {
 			self.container_elements.each(function(index) {
@@ -88,6 +88,7 @@ function animate(container,container_elements,trigger_element,delay_time) {
 			});
 
 			self.active = true;
+			self._window.off('scroll', self.handle_scroll);
 
 		} else if (!over_position && self.active) {
 			clearTimeout();
@@ -161,6 +162,7 @@ Site.on_load = function() {
 	if (Site.is_mobile())
 		Site.mobile_menu = new Caracal.MobileMenu();
 
+	var self_window = $(window);
 	var is_position = true;
 	var position = $('section#methodology').offset().top - 400;
 	var methodology_links = $('section#methodology li.stock.feature');
@@ -170,8 +172,8 @@ Site.on_load = function() {
 	Site.animate_solution = new animate($('section#solutions'),$('section#solutions li'),$('section#solutions'),400);
 
 	// Function for displaying tween animation triggered by window position
-	$(window).scroll(function (event) {
-		if($(window).scrollTop() >= position && is_position) {
+	self_window.scroll(function (event) {
+		if(self_window.scrollTop() >= position && is_position) {
 			is_position = false;
 			methodology_links.each(function() {
 				var end_value = parseInt($(this).find('p').eq(0).text());
