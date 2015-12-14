@@ -106,7 +106,7 @@ Site.on_load = function() {
 	var is_position = true; 
 	var position = $('section#methodology').offset().top - 400;
 	var methodology_links = $('section#methodology li.stock.feature');
-
+			
 	// Function for displaying tween animation triggered by window position
 	$(window).scroll(function (event) {
 		if($(window).scrollTop() >= position && is_position) {
