@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document SYSTEM "../units/schema/language.dtd">
+<document>
+	<cms:var name="_DOCTYPE"/>
+	<html lang="$language" cms:eval="lang">
+		<head>
+			<title><cms:text constant="site_title"/></title>
+			<link href='https://fonts.googleapis.com/css?family=Signika:400,700' rel='stylesheet' type='text/css'/>
+			<cms:module name="head_tag" action="print_tag"/>
+		</head>
+
+		<body class="$language_rtl ? 'rtl' : 'ltr'" cms:eval="class">
+			<section id="terms">
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="terms_policy"
+					template="parts/basic_article.xml"
+					/>	
+			</section>
+
+
+		</body>
+	</html>
+</document>

@@ -4,4 +4,7 @@
 	<section name="home">
 		<language name="all" file="home.xml" />
 	</section>
+	<section name="terms-of-use">
+		<language name="all" file="terms.xml" />
+	</section>
 </document>

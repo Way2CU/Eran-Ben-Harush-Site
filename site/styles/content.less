@@ -6,6 +6,7 @@
  * Authors: Tal Reznic, Mladen Mijatov
  */
 
+section#terms,
 section#contact,
 section#talk,
 section#methodology,
@@ -15,6 +16,20 @@ section#knowledge {
 	text-align: center;
 	padding: 50px calc(~'(100% - 1200px) / 2');
 	text-transform: uppercase;
+}
+
+section#terms {
+	text-align: left;
+	text-transform: none;
+	background-color: lighten(@color_text,60%);
+}
+
+section#terms article {
+	margin-left: auto;
+	margin-right: auto;
+	padding: 20px;
+	width: calc(960px - 40px);
+	background-color: @color_ac_text;
 }
 
 section#talk {
@@ -434,7 +449,6 @@ section#contact div.controls button {
 section#contact div.controls button:hover {
 	color: @color_ac_green;
 }
-
 
 /*Tablet version */
 
