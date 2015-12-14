@@ -46,7 +46,7 @@ Site.is_mobile = function() {
 };
 
 /**
- *	Animate object for animating elements triggered by position of window 
+ *	Animate object for animating elements triggered by position of window
  *
  *
  */
@@ -61,7 +61,7 @@ function animate(container,container_elements,trigger_element,delay_time) {
 	self.active = false;
 
 	/*
-	 * object initialization 
+	 * object initialization
 	 */
 	self._init = function() {
 		// connect signals
@@ -100,7 +100,7 @@ function animate(container,container_elements,trigger_element,delay_time) {
 	}
 
 	// finish object initialization
-	self._init();	 
+	self._init();
 }
 
 function Tween(target, start_value, end_value, duration) {
@@ -146,7 +146,7 @@ function Tween(target, start_value, end_value, duration) {
 			window.requestAnimationFrame(self._callback);
 
 		} else {
-			self._target.html(Math.round(self._end_value)); 
+			self._target.html(Math.round(self._end_value));
 		}
 	};
 
@@ -161,7 +161,7 @@ Site.on_load = function() {
 	if (Site.is_mobile())
 		Site.mobile_menu = new Caracal.MobileMenu();
 
-	var is_position = true; 
+	var is_position = true;
 	var position = $('section#methodology').offset().top - 400;
 	var methodology_links = $('section#methodology li.stock.feature');
 
@@ -173,11 +173,11 @@ Site.on_load = function() {
 	$(window).scroll(function (event) {
 		if($(window).scrollTop() >= position && is_position) {
 			is_position = false;
-			methodology_links.each(function() { 
+			methodology_links.each(function() {
 				var end_value = parseInt($(this).find('p').eq(0).text());
 				new Tween($(this).find('p').eq(0), 0, end_value, 2000);
 			});
-		}  
+		}
 	});
 };
 
