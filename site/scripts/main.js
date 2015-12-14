@@ -75,7 +75,7 @@ function animate(container,container_elements,trigger_element,delay_time) {
 	self.handle_scroll = function(event) {
 		var over_position = $(window).scrollTop() >= self.position;
 
-		for (var i=0; i<100000; i++){}
+		for (var i=0; i<100000; i++){console.log('');}
 
 		if (over_position && !self.active) {
 			self.container_elements.each(function(index) {
