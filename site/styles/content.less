@@ -182,6 +182,10 @@ section#solutions ul {
 	list-style-type: none;
 }
 
+section#solutions ul  {
+	overflow: hidden;
+}
+
 section#talk ul {
 	margin-top: 100px;
 }
@@ -200,9 +204,24 @@ section#solutions li.stock.feature {
 	position: relative;
 }
 
+section#solutions li.stock.feature {
+	left: 100%;
+	transition: all 0.3s;
+}
+
+section#solutions li.stock.feature.active {
+	left: 0%;
+}
+
 section#talk li {
 	width: 20%;
 	padding-bottom: 0px;
+	opacity: 0;
+	transition: all 0.3s;
+}
+
+section#talk li.active {
+	opacity: 1;
 }
 
 section#talk li a {
