@@ -163,7 +163,7 @@ Site.on_load = function() {
 		var methodology_links = $('section#methodology li.stock.feature');
 
 		// initialize animate object
-		Site.animate_talk = new animate($('section#talk'),$('section#talk li'),$('section#methodology li'),400);
+		Site.animate_talk = new animate($('section#talk'),$('section#talk li'),$('section#methodology li'),200);
 		Site.animate_solution = new animate($('section#solutions'),$('section#solutions li'),$('section#solutions'),400);
 
 		// Function for displaying tween animation triggered by window position
