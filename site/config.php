@@ -35,7 +35,7 @@ $db_config = array(
 
 // configure code generation
 $cache_method = CacheType::NONE;
-$optimize_code = false;
+$optimize_code = true;
 $url_rewrite = true;
 
 ?>
