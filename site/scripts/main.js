@@ -156,7 +156,7 @@ function Tween(target, start_value, end_value, duration) {
 Site.on_load = function() {
 	if (Site.is_mobile())
 		Site.mobile_menu = new Caracal.MobileMenu();
-	if(window.location.href.indexOf("terms-of-use") < 0) {	
+	if(window.location.href.indexOf("terms-of-use") < 0) {
 		var self_window = $(window);
 		var is_position = true;
 		var position = $('section#methodology').offset().top - 400;
