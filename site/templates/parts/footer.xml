@@ -2,6 +2,11 @@
 <!DOCTYPE document SYSTEM "../../units/schema/language.dtd">
 <document>
 	<footer>
+		<div id="terms">
+			<a href="url_Make('','terms-of-use')" cms:eval="href">
+				<cms:text constant="title_terms_link"/>
+			</a>
+		</div>
 		<div>
 			<cms:template file="stock/copyright.xml">
 				<param name="holder" value="copyright_holder"/>
