@@ -156,26 +156,27 @@ function Tween(target, start_value, end_value, duration) {
 Site.on_load = function() {
 	if (Site.is_mobile())
 		Site.mobile_menu = new Caracal.MobileMenu();
+	if(window.location.href.indexOf("terms-of-use") < 0) {	
+		var self_window = $(window);
+		var is_position = true;
+		var position = $('section#methodology').offset().top - 400;
+		var methodology_links = $('section#methodology li.stock.feature');
 
-	var self_window = $(window);
-	var is_position = true;
-	var position = $('section#methodology').offset().top - 400;
-	var methodology_links = $('section#methodology li.stock.feature');
+		// initialize animate object
+		Site.animate_talk = new animate($('section#talk'),$('section#talk li'),$('section#methodology li'),400);
+		Site.animate_solution = new animate($('section#solutions'),$('section#solutions li'),$('section#solutions'),400);
 
-	// initialize animate object
-	Site.animate_talk = new animate($('section#talk'),$('section#talk li'),$('section#methodology li'),400);
-	Site.animate_solution = new animate($('section#solutions'),$('section#solutions li'),$('section#solutions'),400);
-
-	// Function for displaying tween animation triggered by window position
-	self_window.scroll(function (event) {
-		if(self_window.scrollTop() >= position && is_position) {
-			is_position = false;
-			methodology_links.each(function() {
-				var end_value = parseInt($(this).find('p').eq(0).text());
-				new Tween($(this).find('p').eq(0), 0, end_value, 2000);
-			});
-		}
-	});
+		// Function for displaying tween animation triggered by window position
+		self_window.scroll(function (event) {
+			if(self_window.scrollTop() >= position && is_position) {
+				is_position = false;
+				methodology_links.each(function() {
+					var end_value = parseInt($(this).find('p').eq(0).text());
+					new Tween($(this).find('p').eq(0), 0, end_value, 2000);
+				});
+			}
+		});
+	}
 };
 
 
