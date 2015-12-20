@@ -4,7 +4,7 @@
 	<cms:var name="_DOCTYPE"/>
 	<html lang="$language" cms:eval="lang">
 		<head>
-			<title><cms:text constant="site_title"/></title>
+			<title><cms:text constant="site_title"/><cms:raw text=" - "/><cms:text constant="title_terms"/></title>
 			<link href='https://fonts.googleapis.com/css?family=Signika:400,700' rel='stylesheet' type='text/css'/>
 			<cms:module name="head_tag" action="print_tag"/>
 		</head>
@@ -18,8 +18,6 @@
 					template="parts/basic_article.xml"
 					/>	
 			</section>
-
-
 		</body>
 	</html>
 </document>
