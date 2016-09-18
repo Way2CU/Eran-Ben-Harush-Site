@@ -7,7 +7,7 @@
 					symbol="$params['text_id']"
 					cms:eval="symbol"/>
 			</figure>
-			<cms:markdown param="description" multilangauge="yes"/>
+			<cms:markdown param="description" multilanguage="yes"/>
 		</a>
 	</li>
 </document>
