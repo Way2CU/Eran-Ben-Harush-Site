@@ -68,7 +68,6 @@
 						action="show_list"
 						group="solutions"
 						template="stock/features_generic.xml"
-						cms:eval="group"
 						>
 						<param name="title" value=""/>
 					</cms:module>
