@@ -37,5 +37,4 @@ $db_config = array(
 $cache_method = CacheType::MEMCACHED;
 $optimize_code = true;
 $url_rewrite = true;
-
 ?>

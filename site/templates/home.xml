@@ -2,14 +2,14 @@
 <!DOCTYPE document SYSTEM "../units/schema/language.dtd">
 <document>
 	<cms:var name="_DOCTYPE"/>
-	<html lang="$language" cms:eval="lang">
+	<html lang="$language" dir="$language_rtl ? 'rtl' : 'ltr'" cms:eval="lang,dir">
 		<head>
 			<title><cms:text constant="site_title"/></title>
 			<link href='https://fonts.googleapis.com/css?family=Signika:400,700' rel='stylesheet' type='text/css'/>
 			<cms:module name="head_tag" action="print_tag"/>
 		</head>
 
-		<body class="$language_rtl ? 'rtl' : 'ltr'" cms:eval="class">
+		<body>
 			<header>
 				<h1><cms:text constant="title_header"/></h1>
 				<p><cms:text constant="sub_header_title"/></p>
