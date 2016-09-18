@@ -10,20 +10,27 @@
 		</head>
 
 		<body>
+			<!-- Sprite svg -->
+			<cms:svg file="site-sprite.svg"/>
 			<header>
 				<h1><cms:text constant="title_header"/></h1>
 				<p><cms:text constant="sub_header_title"/></p>
 
 				<div id="scroll">
-					<svg>
-						<use
-							href="#mousescroll"
-							xlink:href="site/images/site-sprite.svg#mousescroll"
-							/>
-					</svg>
-				<span><cms:text constant="scroll_label"/></span>
+					<cms:svg file="site-sprite.svg" symbol="mousescroll"/>
+					<span><cms:text constant="scroll_label"/></span>
 				</div>
 			</header>
+
+			<section id="delivery">
+				<h2><cms:text constant="title_delivery"/></h2>
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="delivery"
+					template="parts/article.xml"
+					/>
+			</section>
 
 			<section id="knowledge">
 				<h2><cms:text constant="title_knowledge"/></h2>
@@ -52,12 +59,7 @@
 				<h2><cms:text constant="title_solution"/></h2>
 
 				<figure>
-					<svg>
-						<use
-							href="#solutions"
-							xlink:href="site/images/site-sprite.svg#solutions"
-							/>
-					</svg>
+					<cms:svg file="site-sprite.svg" symbol="solutions"/>
 				</figure>
 
 				<ul>
@@ -73,29 +75,6 @@
 				</ul>
 			</section>
 
-			<section id="methodology">
-				<h2><cms:text constant="title_methodology"/></h2>
-
-				<cms:module
-					name="articles"
-					action="show"
-					text_id="methodology"
-					template="parts/article.xml"
-					/>
-
-				<ul>
-					<cms:module
-						name="articles"
-						action="show_list"
-						group="methodology"
-						template="stock/features_generic.xml"
-						cms:eval="group"
-						>
-					</cms:module>
-				</ul>
-			</section>
-
-
 			<section id="talk">
 				<h2><cms:text constant="title_talk"/></h2>
 
@@ -109,16 +88,9 @@
 			</section>
 
 			<section id="contact">
-				<h2><cms:text constant="title_contact"/></h2>
-				<p><cms:text constant="subtitle_contact"/></p>
 
 				<figure>
-					<svg>
-						<use
-							href="#email"
-							xlink:href="site/images/site-sprite.svg#email"
-							/>
-					</svg>
+					<cms:svg file="site-sprite.svg" symbol="email"/>
 				</figure>
 				<p><cms:text constant="title_form"/></p>
 				<cms:module

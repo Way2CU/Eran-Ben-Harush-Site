@@ -2,16 +2,12 @@
 	<li>
 		<a href="$params['url']" cms:eval="href">
 			<figure>
-				<svg>
-					<use
-						href="'#'.$params['text']"
-						xlink:href="'site/images/site-sprite.svg#'.$params['text']"
-						cms:eval="href,xlink:href"
-						/>
-				</svg>
+				<cms:svg 
+					file="site-sprite.svg"
+					symbol="$params['text_id']"
+					cms:eval="symbol"/>
 			</figure>
-
-			<cms:markdown param="description"/>	
+			<cms:markdown param="description" multilangauge="yes"/>
 		</a>
 	</li>
 </document>

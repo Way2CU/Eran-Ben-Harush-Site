@@ -1,12 +1,10 @@
 <document>
 	<figure>
-		<svg>
-			<use
-				href="'#'.$params['text_id']"
-				xlink:href="'site/images/site-sprite.svg#'.$params['text_id']"
-				cms:eval="href,xlink:href"
-				/>
-		</svg>
+		<cms:svg
+			file="site-sprite.svg" 
+			symbol="$params['text_id']"
+			cms:eval="symbol"
+			/>
 	</figure>
 
 	<cms:markdown param="content" multilanguage="yes"/>

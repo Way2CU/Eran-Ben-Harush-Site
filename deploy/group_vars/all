@@ -5,7 +5,7 @@ site:
   # alias: domain.com
   root: httpdocs
   username: web-intro
-  caracal_branch: release
+  caracal_branch: "v0.2"
   ip_address: 74.208.172.190
   # owner: Some Person
   # plan: Unlimited

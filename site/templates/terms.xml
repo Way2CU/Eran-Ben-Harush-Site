@@ -16,7 +16,7 @@
 					action="show"
 					text_id="terms_policy"
 					template="parts/basic_article.xml"
-					/>	
+					/>
 			</section>
 		</body>
 	</html>
