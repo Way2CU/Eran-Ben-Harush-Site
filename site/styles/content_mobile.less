@@ -9,7 +9,7 @@
 section#terms,
 section#contact,
 section#talk,
-section#methodology,
+section#delivery,
 section#solutions,
 section#box,
 section#knowledge {
@@ -46,16 +46,14 @@ section#talk {
 	color: @color_ac_text;
 }
 
-section#methodology {
-	padding-top: 1px;
-	background-color: @color_ac_purple;
-	color: @color_ac_text;
-}
-
 section#contact,
 section#talk,
 section#solutions {
 	text-transform: none;
+}
+
+section#contact {
+	padding: 1em 0em;
 }
 
 section#box {
@@ -70,7 +68,7 @@ section#box {
 
 section#contact h2,
 section#talk h2,
-section#methodology h2,
+section#delivery h2,
 section#solutions h2,
 section#box h2,
 section#knowledge h2 {
@@ -92,7 +90,6 @@ section#solutions h2 {
 }
 
 section#talk h2,
-section#methodology h2,
 section#box h2 {
 	color: @color_ac_text;
 	border: 1px solid @color_ac_text;
@@ -100,7 +97,7 @@ section#box h2 {
 
 section#contact h2:before,
 section#talk h2:before,
-section#methodology h2:before,
+section#delivery h2:before,
 section#solutions h2:before,
 section#box h2:before,
 section#knowledge h2:before {
@@ -115,14 +112,13 @@ section#knowledge h2:before {
 }
 
 section#talk h2:before,
-section#methodology h2:before,
 section#box h2:before {
 	border: 1px solid @color_ac_text;
 }
 
 section#contact > p,
 section#talk > p,
-section#methodology > p,
+section#delivery > p,
 section#solutions > p,
 section#box > p,
 section#knowledge > p {
@@ -149,7 +145,7 @@ section#knowledge strong {
 
 section#contact figure,
 section#talk figure,
-section#methodology figure,
+section#delivery figure,
 section#solutions figure,
 section#box figure,
 section#knowledge figure {
@@ -159,7 +155,7 @@ section#knowledge figure {
 }
 
 section#contact figure:before,
-section#methodology figure:before,
+section#delivery figure:before,
 section#solutions figure:before,
 section#box figure:before,
 section#knowledge figure:before {
@@ -174,14 +170,13 @@ section#knowledge figure:before {
 	border-bottom: 1px solid @color_text;
 }
 
-section#methodology figure:before,
 section#box figure:before {
 	border-top: 1px solid @color_ac_text;
 	border-bottom: 1px solid @color_ac_text;
 }
 
 section#contact figure:after,
-section#methodology figure:after,
+section#delivery figure:after,
 section#solutions figure:after,
 section#box figure:after,
 section#knowledge figure:after {
@@ -196,15 +191,14 @@ section#knowledge figure:after {
 	border-bottom: 1px solid @color_text;
 }
 
-section#methodology figure:after,
 section#box figure:after {
 	border-top: 1px solid @color_ac_text;
-	border-bottom: 1px solid @color_ac_text;	
+	border-bottom: 1px solid @color_ac_text;
 }
 
 section#contact svg,
 section#talk svg,
-section#methodology svg,
+section#delivery svg,
 section#solutions svg,
 section#box svg ,
 section#knowledge svg {
@@ -213,13 +207,11 @@ section#knowledge svg {
 }
 
 section#talk svg,
-section#methodology svg,
 section#box svg {
 	fill: @color_ac_text;
 }
 
 section#talk ul,
-section#methodology ul,
 section#solutions ul {
 	margin: 0px;
 	padding: 0px;
@@ -230,22 +222,11 @@ section#talk ul {
 	margin-top: 50px;
 }
 
-section#methodology ul {
-	margin-top: 50px;
-}
-
 section#talk li,
-section#methodology li.stock.feature,
 section#solutions li.stock.feature {
 	display: block;
 	padding-bottom: 200px;
 	position: relative;
-}
-
-
-section#methodology li.stock.feature:nth-of-type(3) p:first-of-type:after {
-	content: "%";
-	left: 50px;
 }
 
 section#solutions li.stock.feature {
@@ -255,7 +236,7 @@ section#solutions li.stock.feature {
 section#solutions li.stock.feature:before {
 	content: "";
 	position: absolute;
-	top: 40px;
+	top: 5px;
 	left: 50%;
 	margin-left: -150px;
 	background-image: url(../images/features-sprite.svg);
@@ -274,42 +255,14 @@ section#solutions li.stock.feature:nth-of-type(3):before {
 	background-position: -600px 0px;
 }
 
+section#solutions li.stock.feature h4 {
+	margin-bottom: 0;
+}
+
 section#solutions li.stock.feature p {
+	margin-top: 0;
 	padding-left: 15px;
 	padding-right: 15px;
-}
-
-section#methodology li.stock.feature {
-	display: inline-block;
-	vertical-align: top;
-	margin-left: 5px;
-	margin-right: 5px;
-	margin-bottom: 10px;
-	width: calc(48% - 2px);
-	padding-top: 20px;
-	padding-bottom: 20px;
-	border: 1px solid @color_ac_text;
-	white-space: nowrap;
-}
-
-section#methodology li.stock.feature:before {
-	content: "";
-	position: absolute;
-	top: 50%;
-	margin-top: -0.5px;
-	left: 50%;
-	margin-left: -50px;
-	width: 100px;
-	height: 1px;
-	background-color: @color_ac_text;
-}
-
-section#methodology li.stock.feature p{
-	font-size: 2em;
-}
-
-section#methodology li.stock.feature strong {
-	font-size: 0.4em;
 }
 
 section#talk li {
